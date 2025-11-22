@@ -3,6 +3,7 @@
 <head>
     <title>Dashboard athlètes</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,6 +14,25 @@
             <li onclick="afficherPage('statistiques')">Statistiques</li>
         </ul>
     </nav>
+    <div id="accueil" class="page active">
+        <h2>A Propos de nous: </h2>
+        <p>Bienvenue sur le Dashboard de Statistiques Footballistiques !</p>
+        <p>Suivez les performances de vos équipes préférées en temps réel. Analysez les résultats, les buts, les passes, et bien plus encore, mois par mois ou année par année. Que vous soyez un fan du Real Madrid, du PSG ou du Bayern, ce dashboard vous permet de visualiser facilement les performances et de rester informé des succès et des défis de chaque équipe.</p>
+        <h2>Les equipes:</h2>
+        <p>Découvrez l'effectif de chaque équipe en cliquant simplement sur son logo. </p>
+        <div class="container">
+            <a href="https://www.psg.fr/football-masculin/effectif" target="_blank">
+                <img src="images/psg.png" alt="erreur de connexion">
+            </a>
+            <a href="https://www.fifa.com/fr/tournaments/mens/club-world-cup/usa-2025/teams/fc-bayern-munchen/squad" target="_blank">
+                <img src="images/real.png"alt="erreur de connexion">
+            </a>
+            <a href="https://www.realmadrid.com/fr-FR/football/equipe-premiere/effectif" target="_blank">
+                <img src="images/bayern.png" alt="erreur de connexion">
+            </a>
+        </div>
+    </div>
+
     <div id="statistiques" class="page">
         <h2>Statistiques</h2>
         <p>Voici vos statistiques...</p>
@@ -24,6 +44,7 @@
                 <li onclick="changerEquipe('bayern')">Bayern</li>
             </ul>
         </aside>
+        
         <div class="periode-buttons">
             <label>Afficher par : </label>
             <button onclick="changerPeriode('mois')">Mois</button>

@@ -131,3 +131,27 @@ footer {
   font-size: 14px;
   border-top: 3px solid #ff6600;
 }
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        width: 98%;
+        gap: 15px;
+    }
+    
+    canvas {
+        max-width: 90%;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        gap: 10px;
+    }
+    
+    canvas {
+        max-width: 100%;
+        margin: 5px;
+    }
+}
