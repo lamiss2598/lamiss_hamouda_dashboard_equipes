@@ -45,6 +45,48 @@ function initialiserGraphiques() {
 window.onload = function() {
     initialiserGraphiques();
 };
+function changerPeriode(periode){//fonction qui change les graphes à partir de la periode choisie par l'utulisateur
+    const equipeActive = document.querySelector('.equipe-active');
+    if (!equipeActive) return;
+    
+    const equipe = equipeActive.id;
+    
+    if (periode === "mois"){
+        if(equipe === "real"){
+            dessinerperformance_moisreal();
+            dessinerresulat_moisreal();
+            dessinerstat_moisreal();
+        }
+        else if (equipe === "PSG"){
+            dessinerperformance_moisPSG();
+            dessinerresulat_moisPSG();
+            dessinerstat_moisPSG();
+        }
+        else if (equipe === "bayern"){
+            dessinerperformance_moisbayern();
+            dessinerresulat_moisbayern();
+            dessinerstat_moisbayern();
+        }
+    }
+    else if (periode === "annee"){
+        if(equipe === "real"){
+            dessinerperformance_anneereal();
+            dessinerresulat_anneereal();
+            dessinerstat_anneereal();
+        }
+        else if (equipe === "PSG"){
+            dessinerperformance_anneePSG();
+            dessinerresulat_anneePSG();
+            dessinerstat_anneePSG();
+        }
+        else if (equipe === "bayern"){
+            dessinerperformance_anneebayern();
+            dessinerresulat_anneebayern();
+            dessinerstat_anneebayern();
+        }
+    }
+}
+
 // Fonctions de dessin pour Real
 function dessinerperformance_moisreal(){
     const canvas = document.getElementById("performance_real");
@@ -296,6 +338,7 @@ function dessinerstat_anneereal(){
     ctx.lineTo(370, 320);
     ctx.stroke();
 }
+
 // Fonctions de dessin pour PSG
 function dessinerperformance_moisPSG(){
     const canvas = document.getElementById("performance_PSG");
@@ -537,6 +580,7 @@ function dessinerstat_anneePSG(){
     ctx.lineTo(370, 320);
     ctx.stroke();
 }
+
 // Fonctions de dessin pour Bayern
 function dessinerperformance_moisbayern(){
     const canvas = document.getElementById("performance_bayern");
