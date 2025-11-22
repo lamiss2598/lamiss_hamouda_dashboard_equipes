@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard athlètes</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h1>Dashboard de performance sportive</h1></header>
+    <nav>
+        <ul>
+            <li onclick="afficherPage('accueil')">Accueil</li>
+            <li onclick="afficherPage('statistiques')">Statistiques</li>
+        </ul>
+    </nav>
+    <div id="statistiques" class="page">
+        <h2>Statistiques</h2>
+        <p>Voici vos statistiques...</p>
+        <aside>
+            <label>Choisir une équipe</label>
+            <ul id="equipe">
+                <li onclick="changerEquipe('real')">Real</li>
+                <li onclick="changerEquipe('PSG')">PSG</li>
+                <li onclick="changerEquipe('bayern')">Bayern</li>
+            </ul>
+        </aside>
+        <div class="periode-buttons">
+            <label>Afficher par : </label>
+            <button onclick="changerPeriode('mois')">Mois</button>
+            <button onclick="changerPeriode('annee')">Année</button>
+        </div>
+        <div class="container">
+            <div id="real" class="equipe-active">
+                <h3>Real Madrid</h3>
+                <canvas id="performance_real" width="400" height="400"></canvas>
+                <canvas id="stat_real" width="400" height="400"></canvas>
+                <canvas id="resultat_real" width="400" height="400"></canvas>
+            </div>
+        
+            <div id="PSG" class="equipe">
+                <h3>Paris Saint-Germain</h3>
+                <canvas id="performance_PSG" width="400" height="400"></canvas>
+                <canvas id="stat_PSG" width="400" height="400"></canvas>
+                <canvas id="resultat_PSG" width="400" height="400"></canvas>
+            </div>
+        
+            <div id="bayern" class="equipe">
+                <h3>Bayern Munich</h3>
+                <canvas id="performance_bayern" width="400" height="400"></canvas>
+                <canvas id="stat_bayern" width="400" height="400"></canvas>
+                <canvas id="resultat_bayern" width="400" height="400"></canvas>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">© 2025 - Mon Dashboard</footer>
+    <script src="projet.js"></script>
+</body>
+</html>
