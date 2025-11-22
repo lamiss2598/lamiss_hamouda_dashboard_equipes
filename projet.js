@@ -24,6 +24,27 @@ function changerEquipe(equipeId) {//presque la meme chose faite ici pour les cla
         console.log("Équipe NON trouvée:", equipeId);
     }
 }
+function initialiserGraphiques() {
+    document.getElementById('real').classList.add('equipe-active');
+    document.getElementById('real').classList.remove('equipe');
+    
+    // Dessiner les graphiques initiaux
+    dessinerperformance_moisreal();
+    dessinerresulat_moisreal();
+    dessinerstat_moisreal();
+
+    dessinerperformance_moisPSG();
+    dessinerresulat_moisPSG();
+    dessinerstat_moisPSG();
+    
+    dessinerperformance_moisbayern();
+    dessinerresulat_moisbayern();
+    dessinerstat_moisbayern();
+}
+//initialiser la page
+window.onload = function() {
+    initialiserGraphiques();
+};
 // Fonctions de dessin pour Real
 function dessinerperformance_moisreal(){
     const canvas = document.getElementById("performance_real");
