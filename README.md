@@ -34,6 +34,3 @@ La possibilité de choisir la période d’affichage des statistiques (mois ou a
 ## Solutions apportées:
 -Recherches sur W3Schools et autres sites de programmation
 -Voire des exemples de dashboards
-###### Solutions apportées:
--Recherches sur W3Schools et autres sites de programmation
--Voire des exemples de dashboards
